@@ -5,7 +5,7 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   background-image: url("https://entrepreneurship.ncsu.edu/wp-content/uploads/2022/02/austin-skyline.jpeg");
   background-repeat: no-repeat;
-  background-size:cover;
+  background-size: contain;
 }
 /* What kind of selector is this? */
 .logo {
@@ -14,15 +14,19 @@ body {
   margin: 5% 10%;
 }
 
-header {
+/* header {
   display: inline-flex;
-}
+} */
 
 
 /* having the most trouble here */
 
 .has-border {
-  display: inline-flex;
+  display: grid;
+  grid-auto-flow: column;
+  grid-column-gap: 10pt;
+  margin-top: 15pt;
+  margin-left: 10pt;
   border-radius: 25px;
   border: 3px solid #0795C3;
   background: white;
@@ -40,15 +44,14 @@ header {
   border-color: blueviolet;
   border-width: 6px;
   grid-column: 1/2;
-  grid-row: 2;
-  margin-left: 100pt;
+  margin-left: 20pt;
 }
 
 h2 {
   grid-column: 2/3;
   grid-row: 1;
-  margin-right: 50pt;
-  margin-left: 600pt;
+  /* margin-right: 50pt;
+  margin-left: 600pt; */
   font-style: Bold;
   text-align: right;
   font-size: 35px;
@@ -56,23 +59,27 @@ h2 {
 }
 
 .name {
-  grid-column: 2/3;
+  display: grid;
+  grid-template-columns: 40% 60%;
+  grid-column: 1/4;
   grid-row: 2;
-  padding-top: 160pt;
-  text-align: left;
-  justify-content: left;
   color: whitesmoke;
   text-shadow: -4px 2px 0 black;
 }
 
 h1 {
   font-size: 50px;
-  
+  grid-column: 2/3;
+  grid-row: 1;
+  padding-top: 100pt;  
 }
 
 h3 {
   text-indent: 20pt;
   font-size: 33px;
+  grid-column: 2/3;
+  grid-row: 1;
+  padding-top: 155pt;
 }
 
 .small-text {
@@ -82,6 +89,7 @@ h3 {
   font-size: 10px;
   text-align: center;
   padding-top: 115pt;
+  padding-left: 20pt;
 }
 
 button {
